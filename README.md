@@ -1,4 +1,4 @@
-# Wix Bookings Template: A Next.js Coaching Professional Site
+# IIIT Sri City IAE Project Academic Year 2024 
 
 ![Template showcase](docs/media/template-showcase.gif)
 
@@ -7,20 +7,17 @@ This template is a [Next.js](https://nextjs.org/) project bootstrapped with [cre
 
 ## Local Development
 
-Prerequisites:
-
-1. [Create a Wix Headless project](https://dev.wix.com/docs/go-headless/getting-started/setup/general-setup/create-a-project)
-2. [Add the Bookings and Pricing Plans apps to your project](https://dev.wix.com/docs/go-headless/getting-started/setup/general-setup/add-apps-to-a-project)
-3. Authorize the template with [quick start deployment](https://manage.wix.com/headless-funnel-nextjs/select-platform?templateName=appointments-subscriptions) or by [creating an OAuth app](https://dev.wix.com/docs/go-headless/getting-started/setup/authorization/create-an-o-auth-app-for-visitors-and-members)
-4. [Set up your project's eCommerce settings](https://www.wix.com/my-account/site-selector/?buttonText=Select%20Site&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fstore/settings)
-
-Set up environment variables to consume Wix Headless APIs:
+Set up environment variables for the local development environment:
 
 1. In the template's root folder, create a file for the local environment variables:
     ```sh
     cp .env.template .env.local.
     ```
-2. In the new **.env.local** file, paste the OAuth app client ID after `NEXT_PUBLIC_WIX_CLIENT_ID=`.
+2. Copy the following content into .env.local:
+    ```sh
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_Y3VyaW91cy1jaGlwbXVuay0xNy5jbGVyay5hY2NvdW50cy5kZXYk
+    CLERK_SECRET_KEY=sk_test_HNcmaorhZCfftujFoHMhpKDeXojbE8SafXoCNe7RiB
+    ``` 
 
 Run the development server:
 
@@ -34,6 +31,7 @@ Run the development server:
 
     ```sh
     npm i
+    npm run build
     npm run dev
     ```
 
